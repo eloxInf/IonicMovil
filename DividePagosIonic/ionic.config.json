@@ -1,7 +1,0 @@
-{
-  "name": "DividePagos",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "ionic-angular"
-}
