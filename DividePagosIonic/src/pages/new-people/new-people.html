@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Nueva Persona
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-item>
+      <ion-input [(ngModel)]="namePeople" (change)='EnterEvent()' placeholder="Nombre de Persona"></ion-input>
+    </ion-item>
+    <ion-content padding>
+      <ion-grid>
+        <ion-row class="gridHead">
+          <ion-col col-12>Persona</ion-col>
+        </ion-row>
+        <ion-row [ngClass]="(i % 2 == 0) ? 'gridRow' : 'gridRowColor'" id="grd-people-{{people.ID_PEOPLE}}" class="ion-row-color"
+          (click)="ChangeRowPeople(people.ID_PEOPLE)" *ngFor="let people of listPeople; let i = index">
+          <ion-col col-12>
+            {{people.NAME}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-content>
+  </ion-content>
